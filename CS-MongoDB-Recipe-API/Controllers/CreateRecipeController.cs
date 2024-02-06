@@ -7,19 +7,18 @@ namespace MongoDBRecipeApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    /** An API endpoint controller that handles the creation of a new recipe in the MongoDB databse */
     public class CreateRecipeController : ControllerBase
     {
-        private MongoDBClient mongoDBClient;
+        private readonly MongoDBClient mongoDBClient;
         public CreateRecipeController()
         {
-
-
             mongoDBClient = MongoDBClient.GetInstance();
         }
 
 
         [HttpPost]
-        public IActionResult Post([FromBody] RecipeDto recipeDto)
+        public async Task<IActionResult> Post([FromBody] RecipeDto recipeDto)
         {
             if (recipeDto == null)
             {
@@ -28,9 +27,15 @@ namespace MongoDBRecipeApp.Controllers
 
             Recipe newRecipe = new Recipe(recipeDto.RecipeTitle, recipeDto.RecipeDescription);
 
-            mongoDBClient.InsertDocument("Recipes", newRecipe);
+            var insertResult = await mongoDBClient.InsertDocument(newRecipe);
 
-            return Ok();
+            if (insertResult)
+            {
+                return Ok();
+            } else
+            {
+                return BadRequest();
+            }
 
         }
 

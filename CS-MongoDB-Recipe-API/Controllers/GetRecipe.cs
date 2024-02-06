@@ -7,17 +7,21 @@ namespace MongoDBRecipeApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    /** An API endpoint controller that provides a method for getting all documents from a collection and a method for getting a specific
+     * document from a collection based on title
+     */
     public class GetRecipe : ControllerBase
     {
-        private MongoDBClient mongoDBClient;
+        private readonly MongoDBClient mongoDBClient;
 
         public GetRecipe()
         {
             mongoDBClient = MongoDBClient.GetInstance();
         }
 
+        //This method returns an recipe based on title
         [HttpGet("{title}")] 
-        public Recipe? GetRecipeByTitle(string title)
+        public IActionResult GetRecipeByTitle(string title)
         {
             var result = mongoDBClient.GetDocument("Recipes", title);
 
@@ -25,15 +29,16 @@ namespace MongoDBRecipeApp.Controllers
             {
                 Recipe recipe = new Recipe(result.RecipeTitle, result.RecipeDescription);
 
-                return recipe;
+                return Ok(recipe);
             }
             else
             {
 
-                return null;
+                return NotFound();
             }
         }
 
+        //This method returns all recipes from
         [HttpGet("All")]
         public List<Recipe> GetAllRecipes() {
 

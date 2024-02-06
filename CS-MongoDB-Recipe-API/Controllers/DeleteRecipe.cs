@@ -8,6 +8,7 @@ namespace TestWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    /** An API endpoint controller that handles the deletion of a recipe in the MongoDB databse */
     public class DeleteRecipe : ControllerBase
     {
         private readonly MongoDBClient mongoDBClient;
@@ -18,9 +19,17 @@ namespace TestWebAPI.Controllers
         }
 
         [HttpDelete("{title}")]
-        public void DeleteRecipeByTitle(string title)
+        public async Task<IActionResult> DeleteRecipeByTitle(string title)
         {
-            mongoDBClient.DeleteDocumentByTitle("Recipes", title); 
+            var deleteionResult = await mongoDBClient.DeleteDocumentByTitle(title); 
+
+            if(deleteionResult)
+            {
+                return Ok();
+            } else
+            {
+                return NotFound();
+            }
         }
     }
 }

@@ -5,13 +5,13 @@ namespace CS_MongoDB_Recipe_API.Models
 {
     public class Recipe
     {
-        [BsonElement("_Id")]
+        [BsonElement("_id")]
         [BsonRepresentation(BsonType.ObjectId)]
-        private ObjectId Id { get; }
+        private ObjectId Id { get; init; }
         [BsonElement("RecipeTitle")]
-        public string RecipeTitle { get; }
+        public string RecipeTitle { get; init; }
         [BsonElement("RecipeDescription")]
-        public string RecipeDescription { get; }
+        public string RecipeDescription { get; init; }
 
         public Recipe(string title, string description)
         {

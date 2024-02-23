@@ -52,6 +52,19 @@ namespace MongoDBRecipeApp.Controllers
             }
             
         }
+        [HttpGet("Random")]
+        public Recipe GetARandomRecipe()
+        {   
+             var listOfRecipes = mongoDBClient.GetAllFromCollection("Recipes");
+
+             var random = new Random();
+              
+             var randomRecipe = random.Next(listOfRecipes.Count);
+
+            return listOfRecipes[randomRecipe];
+
+
+        }
         
     }
 }

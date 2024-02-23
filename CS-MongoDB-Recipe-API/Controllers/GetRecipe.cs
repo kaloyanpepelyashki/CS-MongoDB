@@ -2,9 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using CS_MongoDB_Recipe_API.DAO;
 using CS_MongoDB_Recipe_API.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MongoDBRecipeApp.Controllers
 {
+    [AllowAnonymous]
     [Route("api/[controller]")]
     [ApiController]
     /** An API endpoint controller that provides a method for getting all documents from a collection and a method for getting a specific

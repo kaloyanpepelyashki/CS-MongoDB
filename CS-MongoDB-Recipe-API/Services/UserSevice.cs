@@ -43,7 +43,7 @@ namespace CS_MongoDB_Recipe_API.Services
         {
             try
             {
-                var profilesMatchingCreds = await _usersCollection.Find(user => user.Email == userEmail && user.Password == userPassword).FirstOrDefaultAsync();
+                var profilesMatchingCreds = await _usersCollection.Find(user => user.Email == userEmail).FirstOrDefaultAsync();
 
                 if (profilesMatchingCreds == null)
                 {

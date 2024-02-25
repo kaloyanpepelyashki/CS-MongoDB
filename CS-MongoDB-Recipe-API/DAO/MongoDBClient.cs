@@ -13,11 +13,10 @@ namespace CS_MongoDB_Recipe_API.DAO
      */
     public class MongoDBClient
     {
-        private static MongoDBClient instance;
-
-        private readonly IConfiguration _configuration;
-        private readonly IMongoDatabase? _database;
-        private readonly string? connectionString;
+        protected static MongoDBClient instance;
+        protected readonly IConfiguration _configuration;
+        protected readonly IMongoDatabase? _database;
+        protected readonly string? connectionString;
         public IMongoClient client;
 
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication.Cookies;
+﻿using CS_MongoDB_Recipe_API.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -11,30 +12,75 @@ namespace CS_MongoDB_Recipe_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    /**This is the Authentication service controller which is only in charge of authenticating users
+     * The authentication happens through the UserService service.
+     */
     public class AuthController : Controller
     {
         private readonly IConfiguration _configuration;
+        private readonly UserService _userService;
         public AuthController(IConfiguration configuration)
         {
             _configuration = configuration;
+            _userService = UserService.GetInstance();
         }
-        [HttpPost]
-        public IActionResult SignIn([FromBody] AuthDTO authDto)
+
+        [HttpPost("SignIn")]
+
+        /** This is the SignIn authentication method part of the AuthController. 
+         * The method "signs in" the user and calls the GeneratJWTToken method if the authentication is successful.
+         * The method checks the validity of sign in credentials by using the AuthSignIn method part of the UserService class. 
+         * If the AuthSignIn method returns a User object and not a null, it means a user with those credentials was found in the database, therefore the
+         * sign in is successful.
+         */
+        public async Task<IActionResult> SignIn([FromBody] AuthDTO authDto)
         {
-            if(authDto.Password == "correctPass" && authDto.Email == "correctEmail")
+            try
             {
-                var jwt = GenerateJWTToken(authDto);
-                if (jwt != null) 
+                var _authSignInResult = await _userService.AuthSignIn(authDto.Email, authDto.Password);
+
+                if (_authSignInResult != null)
                 {
-                    return Ok(new { access_token = jwt }); 
+                    var jwt = GenerateJWTToken(authDto);
+                    if (jwt != null)
+                    {
+                        return Ok(new { access_token = jwt });
+                    }
+
+                    throw new Exception("Error generating JWT");
                 }
 
-                throw new Exception($"Error generating JWT");
+                return Unauthorized();
+            } catch (Exception e)
+            {
+                Console.WriteLine($"Error signing in: {e}");
+                throw new Exception($"Error signing in user, error: {e}");
             }
+        }
+        [HttpPost("SignUp")]
+        public async Task<IActionResult> SignUp([FromBody] AuthDTO authDto)
+        {
+            try
+            {
+                var _authSignUpResult = await _userService.AuthSignUp(authDto.Email, authDto.Password);
 
-            return Unauthorized();
+                if(_authSignUpResult)
+                {
+                    return Ok("Account created successfully");
+                }
+
+                return Conflict("Email already exists.");
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine($"Error signing in: {e}");
+                throw new Exception($"Error signing up user, error: {e}");
+            }
         }
 
+        /** This method generates a JWToken
+         * This method is ONLY accesible whithin this controller
+         */
         private string GenerateJWTToken(AuthDTO authDto)
         {
             try
@@ -44,10 +90,10 @@ namespace CS_MongoDB_Recipe_API.Controllers
 
                 var claims = new[]
                 {
-            new Claim(JwtRegisteredClaimNames.Sub, authDto.Email),
-            new Claim("myCustomClaim", "myCustomValue"),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-        };
+                    new Claim(JwtRegisteredClaimNames.Sub, authDto.Email),
+                    new Claim("myCustomClaim", "myCustomValue"),
+                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                };
 
                 var token = new JwtSecurityToken(
                     issuer: _configuration["JwtSettings:Issuer"],

@@ -23,6 +23,11 @@ namespace RecipeWebApp.Controllers
             return View();
         }
 
+        public IActionResult DeleteRecipe()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

@@ -1,8 +1,27 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    List<Recipe> recipes = (List<Recipe>)ViewData["recipes"];
 }
 
 <div class="text-center">
-    <h1 class="display-4">This is home route</h1>
-    <p>This page will display all of the different recipes</p>
+    <h1 class="display-4">Current recipe list</h1>
+    <p>Here are all of the stored recipes</p>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th class="text-start" scope="col">#</th>
+                <th class="text-start" scope="col">Recipe Name</th>
+                <th class="text-start" scope="col">Recipe description</th>
+                <th class="text-start" scope="col">Action</th>
+            </tr>
+        </thead>
+        @if (ViewData["recipes"] != null)
+        { 
+            @for (var i = 0; i < recipes.Count; i++)
+            {
+                <tr><th class="text-start" scope="row">@i</th><td class="text-start">@recipes[i].RecipeTitle</td><td class="text-start">@recipes[i].RecipeDescription</td><td><button class="btn btn-light">Edit</button><a class="btn btn-danger" asp-controller="Home" asp-action="DeleteRecipe" asp-route-id="@recipes[i].RecipeTitle">Delete</a></td></tr>
+            }
+
+        }
+    </table>
 </div>

@@ -29,7 +29,7 @@ namespace MongoDBRecipeApp.Controllers
 
             if (result != null)
             {
-                Recipe recipe = new Recipe(result.RecipeTitle, result.RecipeDescription);
+                Recipe recipe = new Recipe(result.RecipeTitle, result.RecipeDescription, result.RecipeId);
 
                 return Ok(recipe);
             }

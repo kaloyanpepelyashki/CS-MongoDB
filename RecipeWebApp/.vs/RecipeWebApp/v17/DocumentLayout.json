@@ -1,0 +1,171 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\cs-mongodb\\recipewebapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\cs-mongodb\\recipewebapp\\views\\home\\updaterecipe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|solutionrelative:views\\home\\updaterecipe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\cs-mongodb\\recipewebapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\cs-mongodb\\recipewebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\cs-mongodb\\recipewebapp\\services\\recipesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|solutionrelative:services\\recipesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\cs-mongodb\\recipewebapp\\services\\serviceinterfaces\\irecipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|solutionrelative:services\\serviceinterfaces\\irecipeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\cs-mongodb\\recipewebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\cs-mongodb\\recipewebapp\\views\\home\\createrecipe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|solutionrelative:views\\home\\createrecipe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|c:\\users\\kaloyan\\desktop\\my projects and works\\learning\\c#\\solo\\cs-mongodb\\recipewebapp\\views\\home\\deleterecipe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{20C73948-DCDF-4140-9018-D2BC24A9D44B}|RecipeWebApp.csproj|solutionrelative:views\\home\\deleterecipe.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T12:54:53.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IRecipeService.cs",
+              "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Services\\ServiceInterfaces\\IRecipeService.cs",
+              "RelativeDocumentMoniker": "Services\\ServiceInterfaces\\IRecipeService.cs",
+              "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Services\\ServiceInterfaces\\IRecipeService.cs",
+              "RelativeToolTip": "Services\\ServiceInterfaces\\IRecipeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T10:54:13.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T14:24:05.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RecipesService.cs",
+              "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Services\\RecipesService.cs",
+              "RelativeDocumentMoniker": "Services\\RecipesService.cs",
+              "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Services\\RecipesService.cs",
+              "RelativeToolTip": "Services\\RecipesService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-28T13:06:13.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-28T12:39:10.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DeleteRecipe.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Views\\Home\\DeleteRecipe.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\DeleteRecipe.cshtml",
+              "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Views\\Home\\DeleteRecipe.cshtml",
+              "RelativeToolTip": "Views\\Home\\DeleteRecipe.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-27T13:54:03.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateRecipe.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Views\\Home\\UpdateRecipe.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\UpdateRecipe.cshtml",
+              "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Views\\Home\\UpdateRecipe.cshtml",
+              "RelativeToolTip": "Views\\Home\\UpdateRecipe.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-27T13:52:39.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CreateRecipe.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Views\\Home\\CreateRecipe.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\CreateRecipe.cshtml",
+              "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Views\\Home\\CreateRecipe.cshtml",
+              "RelativeToolTip": "Views\\Home\\CreateRecipe.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-27T13:47:11.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Learning\\C#\\Solo\\CS-MongoDB\\RecipeWebApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-27T13:45:35.132Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

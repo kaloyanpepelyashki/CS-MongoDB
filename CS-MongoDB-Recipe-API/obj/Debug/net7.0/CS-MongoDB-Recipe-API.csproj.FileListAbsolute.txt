@@ -38,7 +38,6 @@ C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-Mo
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-MongoDB-Recipe-API\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-MongoDB-Recipe-API\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-MongoDB-Recipe-API\obj\Debug\net7.0\scopedcss\bundle\CS-MongoDB-Recipe-API.styles.css
-C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-MongoDB-Recipe-API\obj\Debug\net7.0\CS-MongoDB-Recipe-API.csproj.CopyComplete
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-MongoDB-Recipe-API\obj\Debug\net7.0\CS-MongoDB-Recipe-API.dll
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-MongoDB-Recipe-API\obj\Debug\net7.0\refint\CS-MongoDB-Recipe-API.dll
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-MongoDB-Recipe-API\obj\Debug\net7.0\CS-MongoDB-Recipe-API.pdb
@@ -52,3 +51,5 @@ C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-Mo
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-MongoDB-Recipe-API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-MongoDB-Recipe-API\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-MongoDB-Recipe-API\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-MongoDB-Recipe-API\obj\Debug\net7.0\CS-MongoDB-Recipe-API.sourcelink.json
+C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\CS-MongoDB-Recipe-API\obj\Debug\net7.0\CS-Mongo.A6C4E9AB.Up2Date

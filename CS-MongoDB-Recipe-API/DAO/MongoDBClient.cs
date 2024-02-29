@@ -135,5 +135,21 @@ namespace CS_MongoDB_Recipe_API.DAO
                 return false;
             }
         }
+
+        public async Task<bool> UpdateRecipeById(string recipeId, string newRecipeTitle, string newRecipeDescription)
+        {
+            try
+            {
+                var collection = _database?.GetCollection<Recipe>("Recipes");
+                var filter = Builders<Recipe>.Filter.Eq("RecipeId", recipeId);
+                var patch = Builders<Recipe>.Update.Set("RecipeTitle", newRecipeTitle).Set("RecipeDescription", newRecipeDescription);
+                var updateResult =  await collection.UpdateOneAsync(filter, patch);
+
+                return updateResult.IsAcknowledged;
+            } catch(Exception e)
+            {
+                throw new Exception($"Error updating recipe with id {recipeId}: {e}");
+            }
+        }
     }
 }

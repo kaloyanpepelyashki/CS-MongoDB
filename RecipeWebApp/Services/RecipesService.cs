@@ -1,8 +1,9 @@
 ﻿using Newtonsoft.Json;
 using RecipeWebApp.Models;
+using RecipeWebApp.Services.ServiceInterfaces;
 namespace RecipeWebApp.Services
 {
-    public class RecipesService
+    public class RecipesService : IRecipeService
     {
         private readonly HttpClient _httpClient;
 
@@ -15,18 +16,23 @@ namespace RecipeWebApp.Services
         {
             try
             {
-                var response = await _httpClient.GetAsync("url/endpoint");
-                response.EnsureSuccessStatusCode();
+                var response = await _httpClient.GetAsync("http://localhost:5291/api/GetRecipe/All");
                 var content = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<List<Recipe>>(content);
+                var parsedResponse = JsonConvert.DeserializeObject<List<Recipe>>(content);
+                if(parsedResponse != null)
+                {
+                    return parsedResponse;
+                }
+
+                return null;
             } catch(Exception e)
-            {
+            { 
                 Console.Write($"Error getting all recipes: {e}");
                 throw new Exception($"Error getting all recipes: {e}");
             }
         }
 
-        public async Task<Recipe> getARecipeById(int id)
+        public async Task<Recipe> getARecipeByTitle(string title)
         {
             try
             {
@@ -37,8 +43,8 @@ namespace RecipeWebApp.Services
             }
             catch (Exception e)
             {
-                Console.Write($"Error getting recipe with id {id}: {e}");
-                throw new Exception($"Error getting recipe with id {id}: {e}");
+                Console.Write($"Error getting recipe with id {title}: {e}");
+                throw new Exception($"Error getting recipe with id {title}: {e}");
             }
         }
     }

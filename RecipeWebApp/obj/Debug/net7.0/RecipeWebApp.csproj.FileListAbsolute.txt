@@ -29,3 +29,6 @@ C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\Recip
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\RecipeWebApp\obj\Debug\net7.0\RecipeWebApp.pdb
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\RecipeWebApp\obj\Debug\net7.0\RecipeWebApp.genruntimeconfig.cache
 C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\RecipeWebApp\obj\Debug\net7.0\ref\RecipeWebApp.dll
+C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\RecipeWebApp\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\RecipeWebApp\obj\Debug\net7.0\RecipeWebApp.sourcelink.json
+C:\Users\Kaloyan\Desktop\My Projects and works\Learning\C#\Solo\CS-MongoDB\RecipeWebApp\obj\Debug\net7.0\RecipeWe.91AD376F.Up2Date

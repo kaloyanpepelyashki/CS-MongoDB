@@ -1,11 +1,12 @@
 ﻿using CS_MongoDB_Recipe_API.DAO;
 using CS_MongoDB_Recipe_API.Models;
+using CS_MongoDB_Recipe_API.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 using MongoDB.Driver;
 
 namespace CS_MongoDB_Recipe_API.Services
 {
-    public class UserService
+    public class UserService: IUserService
     {
         protected static UserService instance;
         protected IMongoClient _mongoDbClient;

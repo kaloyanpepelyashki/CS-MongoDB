@@ -20,27 +20,34 @@ namespace MongoDBRecipeApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] RecipeDto recipeDto)
         {
-            if (recipeDto == null)
+            try
             {
-                return BadRequest();
+                if (recipeDto == null)
+                {
+                    return BadRequest("Error creating recipe: Empty recipe was submitted. Please provide valid info");
+                }
+
+                Recipe newRecipe = new Recipe(recipeDto.RecipeTitle, recipeDto.RecipeDescription, recipeDto.RecipeId);
+
+                var insertResult = await mongoDBClient.InsertDocument(newRecipe);
+
+                if (insertResult)
+                {
+                    return Ok();
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            } catch (Exception e) {
+
+                return BadRequest($"Error inserting recipe: {e}");
             }
-
-            Recipe newRecipe = new Recipe(recipeDto.RecipeTitle, recipeDto.RecipeDescription);
-
-            var insertResult = await mongoDBClient.InsertDocument(newRecipe);
-
-            if (insertResult)
-            {
-                return Ok();
-            } else
-            {
-                return BadRequest();
-            }
-
         }
 
         public class RecipeDto
         {
+            public string RecipeId = Guid.NewGuid().ToString();
             public string RecipeTitle { get; set; }
             public string RecipeDescription { get; set; }
         }

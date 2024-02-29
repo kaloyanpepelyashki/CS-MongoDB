@@ -7,7 +7,8 @@ namespace CS_MongoDB_Recipe_API.Models
     {
         [BsonElement("_id")]
         [BsonRepresentation(BsonType.ObjectId)]
-        private ObjectId Id { get; init; }
+        public ObjectId Id { get; init; }
+
         [BsonElement("RecipeId")]
         public string RecipeId { get; init; }
         [BsonElement("RecipeTitle")]

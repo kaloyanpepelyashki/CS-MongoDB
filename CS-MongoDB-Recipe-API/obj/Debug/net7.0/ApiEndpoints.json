@@ -57,7 +57,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
@@ -139,5 +139,21 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "CS_MongoDB_Recipe_API.Controllers.UpdateRecipe",
+    "Method": "UpdateRecipeById",
+    "RelativePath": "byId",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recipeUpdateDto",
+        "Type": "CS_MongoDB_Recipe_API.Controllers.UpdateRecipe\u002BRecipeUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

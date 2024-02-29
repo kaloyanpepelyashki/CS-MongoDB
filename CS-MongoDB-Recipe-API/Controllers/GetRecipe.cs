@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using CS_MongoDB_Recipe_API.DAO;
 using CS_MongoDB_Recipe_API.Models;
 using Microsoft.AspNetCore.Authorization;
+using CS_MongoDB_Recipe_API.Services.Interfaces;
+using CS_MongoDB_Recipe_API.Services;
 
 namespace MongoDBRecipeApp.Controllers
 {
@@ -14,18 +16,18 @@ namespace MongoDBRecipeApp.Controllers
      */
     public class GetRecipe : ControllerBase
     {
-        private readonly MongoDBClient mongoDBClient;
+        private readonly IRecipeService recipeService;
 
         public GetRecipe()
         {
-            mongoDBClient = MongoDBClient.GetInstance();
+            recipeService =  RecipeService.GetInstance();
         }
 
         //This method returns an recipe based on title
         [HttpGet("{title}")] 
         public IActionResult GetRecipeByTitle(string title)
         {
-            var result = mongoDBClient.GetDocument("Recipes", title);
+            var result = recipeService.GetDocument("Recipes", title);
 
             if (result != null)
             {
@@ -44,7 +46,7 @@ namespace MongoDBRecipeApp.Controllers
         [HttpGet("All")]
         public List<Recipe> GetAllRecipes() {
 
-            var result = mongoDBClient.GetAllFromCollection("Recipes");
+            var result = recipeService.GetAllFromCollection("Recipes");
 
             if(result != null) {
                 return result;
@@ -57,7 +59,7 @@ namespace MongoDBRecipeApp.Controllers
         [HttpGet("Random")]
         public Recipe GetARandomRecipe()
         {   
-             var listOfRecipes = mongoDBClient.GetAllFromCollection("Recipes");
+             var listOfRecipes = recipeService.GetAllFromCollection("Recipes");
 
              var random = new Random();
               

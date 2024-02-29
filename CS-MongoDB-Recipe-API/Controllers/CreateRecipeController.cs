@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using CS_MongoDB_Recipe_API.Models;
-using CS_MongoDB_Recipe_API.DAO;
+using CS_MongoDB_Recipe_API.Services.Interfaces;
+using CS_MongoDB_Recipe_API.Services;
 
 namespace MongoDBRecipeApp.Controllers
 {
@@ -10,10 +11,10 @@ namespace MongoDBRecipeApp.Controllers
     /** An API endpoint controller that handles the creation of a new recipe in the MongoDB databse */
     public class CreateRecipeController : ControllerBase
     {
-        private readonly MongoDBClient mongoDBClient;
+        private readonly IRecipeService recipeService;
         public CreateRecipeController()
         {
-            mongoDBClient = MongoDBClient.GetInstance();
+            recipeService = RecipeService.GetInstance();
         }
 
 
@@ -27,9 +28,9 @@ namespace MongoDBRecipeApp.Controllers
                     return BadRequest("Error creating recipe: Empty recipe was submitted. Please provide valid info");
                 }
 
-                Recipe newRecipe = new Recipe(recipeDto.RecipeTitle, recipeDto.RecipeDescription, recipeDto.RecipeId);
+                Recipe newRecipe = new Recipe(recipeDto.RecipeTitle, recipeDto.RecipeDescription, "taehrhadohasdha");
 
-                var insertResult = await mongoDBClient.InsertDocument(newRecipe);
+                var insertResult = await recipeService.InsertDocument(newRecipe);
 
                 if (insertResult)
                 {
@@ -47,7 +48,7 @@ namespace MongoDBRecipeApp.Controllers
 
         public class RecipeDto
         {
-            public string RecipeId = Guid.NewGuid().ToString();
+            //public string RecipeId = Guid.NewGuid().ToString();
             public string RecipeTitle { get; set; }
             public string RecipeDescription { get; set; }
         }
